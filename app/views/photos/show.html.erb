@@ -1,0 +1,9 @@
+<br>
+<%= link_to 'Back', :back %>
+<%= link_to "delete photo",  album_photo_path, :method =>"DELETE", 
+              	data: { confirm: 'Are you sure?' } %>
+
+
+<div class="page-header"><h1>Photos</h1></div>
+	
+<%= render @photo %>

@@ -1,0 +1,12 @@
+
+<table>
+ 	<body>
+    	<th>Tag name</th>
+      	<% @tags.each do |t| %>
+        	<tr>
+	            <td><%= tag.name %> </td>
+	            <td><%= link_to "show photo"%></td>
+	       	</tr>
+   	  	<% end %>
+    </body>
+</table>

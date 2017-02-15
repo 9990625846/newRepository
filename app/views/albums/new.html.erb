@@ -1,0 +1,8 @@
+<%= form_tag("/albums", method: "post") do %>
+	<h1><i>New Album</i></h1>
+	Enter Album Name
+	<%= text_field(:album, :name) %><br>
+	Description
+	<%= text_field(:album, :description) %><br>
+	<%= submit_tag("Create Albums") %>
+<% end %>

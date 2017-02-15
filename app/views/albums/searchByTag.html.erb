@@ -1,0 +1,16 @@
+
+<table>
+ 	<body>
+    	<th>Tag name</th>
+      	<% @tags.each do |tag| %>
+        	<tr>
+	            <%if tag.photo.present? %>
+		            <% if tag.photo.album_id == params[:id].to_i %>
+		            	<td><%= tag.text %> </td>
+		            	<td><%= link_to "show photo",album_photo_path(tag.photo.album_id,tag.photo_id)%></td>
+		            <% end %>
+		        <% end %>    
+	       	</tr>
+   	  	<% end %>
+    </body>
+</table>

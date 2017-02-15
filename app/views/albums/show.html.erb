@@ -1,0 +1,32 @@
+ <%= form_tag(:controller => "albums", :action => "searchByTag", :id =>@album) do %>  
+  Enter Tag Name
+  <%= text_field_tag(:search) %><br />  
+  <%= submit_tag("Search") %>  
+<% end %>
+</table>
+<div class="page-header"><h1>Photos</h1></div>
+<%= link_to "New Photo",  new_album_photo_path(@album) %><br>
+
+<table>
+ 		<body>
+        <th>Title</th>
+        <th>image_file_name:</th><br>
+      	<% @photos.each do |photo| %>
+          <tr>
+	          <td><%= photo.title %> </td>
+            <td><%= photo.image_file_name %> </td>
+            <td><%= link_to "Show Photo",  album_photo_path(@album,photo.id) %></td>
+
+        	</tr>
+   	  	<% end %>
+    </body>
+</table>
+
+
+
+ 
+
+
+
+
+

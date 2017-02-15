@@ -1,0 +1,19 @@
+<br>
+  <%= link_to "Create a new album", controller: "albums", action: "new" %><br>
+	<table>
+ 		<body>
+        <th>Album name</th>
+        <th>Description</th><br>
+      	<% @albums.each do |album| %>
+          <tr>
+	          <td><%= album.name %> </td>
+            <td> <%= album.description %> </td>
+	          <td><%= link_to "show album", album_path(album) %></td>
+	          <td><%= link_to "delete album",  album_path(album),method: :delete,
+              	data: { confirm: 'Are you sure?' } %></td>
+        	</tr>
+   	  	<% end %>
+    </body>
+  </table>
+
+ 

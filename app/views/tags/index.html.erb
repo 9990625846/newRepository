@@ -1,0 +1,12 @@
+<h1>index</h1>
+<table>
+ 	<body>
+        <th>Tag Name</th>
+        <% @tags.each do |t| %>
+         <tr>
+	        <td><%= t.text %> </td>
+	        <td><%= link_to "Show Photo",  album_photo_tag_path(@album,@photo,@tags) %></td>
+       	<% end %>
+    </body>
+</table>
+
